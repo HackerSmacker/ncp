@@ -977,7 +977,7 @@ static void application(void) {
     }
 
     fprintf(stderr, "NCP: Received application request %u from %s.\n",
-                     app[0], client.sun_path);
+        app[0], client.sun_path);
 
     if(!wire_check(app[0], n)) {
         fprintf(stderr, "NCP: bad application request.\n");
@@ -989,10 +989,10 @@ static void application(void) {
     case WIRE_OPEN:             app_open(); break;
     case WIRE_LISTEN:         app_listen(); break;
     case WIRE_READ:             app_read(); break;
-    case WIRE_WRITE:            app_write(n - 2); break;
-    case WIRE_INTERRUPT:    app_interrupt(); break;
-    case WIRE_CLOSE:            app_close(); break;
-    default:                            fprintf(stderr, "NCP: bad application request.\n"); break;
+    case WIRE_WRITE:      app_write(n - 2); break;
+    case WIRE_INTERRUPT:   app_interrupt(); break;
+    case WIRE_CLOSE:           app_close(); break;
+    default: fprintf(stderr, "NCP: bad application request.\n"); break;
     }
 }
 
@@ -1011,6 +1011,7 @@ void ncp_init(void) {
     strncpy(server.sun_path, path, sizeof server.sun_path - 1);
     if(bind(fd,(struct sockaddr *)&server, sizeof server) == -1) {
         fprintf(stderr, "NCP: bind error: %s.\n", strerror(errno));
+        fprintf(stderr, "Is $NCP set to the path to a domain socket? If so, run 'rm $NCP' before retrying.\n");
         exit(1);
     }
     atexit(cleanup);

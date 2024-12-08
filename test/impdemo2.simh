@@ -1,0 +1,26 @@
+;;  *** IMP NODE #3 SETUP ***
+
+set hi1 debug
+
+;   IMP #3 connects to IMP #2.  Modem line 1 on this end connects to line 1
+;   on IMP #2.
+
+; Set the simulator configuration ...
+echo Creating standard configuration for IMP #3 ...
+do impconfig.simh
+SET IMP NUM=3
+
+; Load the IMP code ...
+echo Loading IMP code ...
+do impcode.simh
+
+; Start up the modem links!
+echo Attaching modem links ...
+; SET MI2 ENABLED
+ATTACH MI1 4431::4421
+
+; Set up a host interface.
+echo Attaching host interface ...
+ATTACH HI1 22003:localhost:22004
+
+go

@@ -18,3 +18,8 @@ finger: finger.o libncp.a
 
 finser: finser.o libncp.a
 	$(CC) -o $@ $< $(NCP)
+
+.PHONY: clean
+
+clean:
+	rm -f *.o *.a ncp ping finger finser

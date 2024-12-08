@@ -1,0 +1,15 @@
+./imp2.simh-3> set debug stdout
+%SIM-INFO: Debug output to "/Users/wec/homework/ncp/test/stdout"
+Debug output to "/Users/wec/homework/ncp/test/stdout" at Sun Dec  8 10:09:58 2024
+H316 simulator V4.0-0 Current        git commit id: 8469b30d
+Creating standard configuration for IMP #2 ...
+./imp2.simh-3> set debug stdout
+%SIM-INFO: Debug output to "/Users/wec/homework/ncp/test/stdout"
+Debug output to "/Users/wec/homework/ncp/test/stdout" at Sun Dec  8 10:10:29 2024
+H316 simulator V4.0-0 Current        git commit id: 8469b30d
+Creating standard configuration for IMP #2 ...
+./imp2.simh-3> set debug stdout
+%SIM-INFO: Debug output to "/Users/wec/homework/ncp/test/stdout"
+Debug output to "/Users/wec/homework/ncp/test/stdout" at Sun Dec  8 10:11:22 2024
+H316 simulator V4.0-0 Current        git commit id: 8469b30d
+Creating standard configuration for IMP #2 ...
